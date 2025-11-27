@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Configuración para GitHub Pages en el repo "Frontend"
+// Configuración para Producción (GitHub Pages)
 export default defineConfig({
   plugins: [react()],
-  base: '/Frontend/', 
+  base: '/Frontend/',  // <--- ESTA LÍNEA ES OBLIGATORIA EN GITHUB
 })

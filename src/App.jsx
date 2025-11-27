@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://backend-emociones-e4qp.onrender.com/";
 
 function App() {
   // --- 2. Estados de la Aplicación (React Hooks) ---

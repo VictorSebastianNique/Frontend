@@ -3,6 +3,7 @@ name: Desplegar React a GitHub Pages
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,10 +25,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # HE QUITADO LA LÍNEA DE 'cache: npm' PARA QUE NO TE PIDA EL LOCK FILE
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm install 
+        # Usamos 'npm install' en lugar de 'npm ci' para que no exija package-lock.json
 
       - name: Construir proyecto (Build)
         run: npm run build
